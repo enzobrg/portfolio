@@ -4,21 +4,32 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar nav">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon text-white"><i class="fas fa-hamburger fs-2 mb-2"></i></span>
         </button>
+        <h3 class="text-white mt-3 mb-2">Portfolio</h3>
+        <div class="text-white">
+        {% if app.user %}
+            {{ app.user.email }}
+            <a href="{{ path('app_logout') }}"> Se déconnecter</a>
+        {% else %}
+            <a href="{{ path('login') }}"> Se connecter</a>
+        {% endif %}
+        </div>
+        <div><a href="https://github.com/enzobrg"><i class="fab fa-github-alt fa-spin github fs-3 m-3"></i></a>
+            <a href="https://www.linkedin.com/in/enzo-bourgoin-75045a195/"><i class="fab fa-linkedin-in fa-spin linkd fs-3 m-2"></i></a></div>
     </div>
 </nav>
 <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
-        <h5 class="text-white h4">Catégorie <i class="fas fa-align-justify"></i></h5>
-        <a href="" class="nav-link text-white fs-5">Les derniers projets</a><br>
-        <a href="" class="nav-link text-white fs-5">Les projets clients</a><br>
-        <a href="" class="nav-link text-white fs-5">Les sides-projets</a><br>
-        <h5 class="text-white h4">Admin <i class="fas fa-user-lock"></i></h5>
-        <a href="" class="nav-link text-white fs-5">4dm1n</a><br>
+        <h5 class="text-white h4 m-2">Catégorie <i class="fas fa-align-justify"></i></h5>
+        <a href="#div1" class="nav-link text-white fs-5 mb-0">Les derniers projets</a><br>
+        <a href="#div2" class="nav-link text-white fs-5 mt-0">Les projets clients</a><br>
+        <a href="#div3" class="nav-link text-white fs-5 mt-0">Les sides-projets</a><br>
+        <h5 class="text-white h4 mt-0">Admin <i class="fas fa-user-lock"></i></h5>
+        <a href="{{ path('admin') }}" class="nav-link text-white fs-5 mt-0">4dm1n</a><br>
     </div>
 </div>
 </body>

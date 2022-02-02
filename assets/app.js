@@ -9,6 +9,9 @@
 import './styles/golobal.scss';
 import './styles/_components/_line.scss';
 import './styles/home/projets.scss';
+import './styles/_components/_nav.scss';
+
+import './swiper';
 
 // start the Stimulus application
 import './bootstrap';
