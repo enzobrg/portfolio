@@ -20,7 +20,7 @@
         {% endfor %}
     </div>
     <div class="d-flex justify-content-center">
-    <a href="" class="text-white fs-4 nav-link">Voir tout les derniers projets ? <i class="far fa-arrow-alt-circle-right fs-2 arrow"></i></a>
+    <a href="{{ path('home_lastProjects') }}" class="text-white fs-4 nav-link">Voir tout les derniers projets ? <i class="far fa-arrow-alt-circle-right fs-2 arrow"></i></a>
     </div>
 
     <div class="text-white fs-2 m-5" id="div2">
@@ -42,7 +42,7 @@
         {% endfor %}
     </div>
     <div class="d-flex justify-content-center">
-        <a href="" class="text-white fs-4 nav-link">Voir tout les projets clients ? <i class="far fa-arrow-alt-circle-right fs-2 arrow"></i></a>
+        <a href="{{ path('home_customersProjects') }}" class="text-white fs-4 nav-link">Voir tout les projets clients ? <i class="far fa-arrow-alt-circle-right fs-2 arrow"></i></a>
     </div>
 
     <div class="text-white fs-2 m-5" id="div3">
@@ -61,6 +61,6 @@
         {% endfor %}
     </div>
     <div class="d-flex justify-content-center">
-        <a href="" class="text-white fs-4 nav-link mb-5">Voir tout les sides-projects ? <i class="far fa-arrow-alt-circle-right fs-2 arrow"></i></a>
+        <a href="{{ path('home_sideProjects') }}" class="text-white fs-4 nav-link mb-5">Voir tout les sides-projects ? <i class="far fa-arrow-alt-circle-right fs-2 arrow"></i></a>
     </div>
 {% endblock %}

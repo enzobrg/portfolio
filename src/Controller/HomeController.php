@@ -26,4 +26,37 @@ class HomeController extends AbstractController
             'projects' => $projects,
         ]);
     }
+
+    /**
+     * @Route("/lastProjects", name="lastProjects")
+     */
+    public function lastProjects(ManagerRegistry $managerRegistry): Response
+    {
+        $projects = $managerRegistry->getRepository(Projects::class)->findAll();
+        return $this->render('home/lastProjects.html.twig', [
+            'projects' => $projects,
+        ]);
+    }
+
+    /**
+     * @Route("/customersProjects", name="customersProjects")
+     */
+    public function customersProjects(ManagerRegistry $managerRegistry): Response
+    {
+        $projects = $managerRegistry->getRepository(Projects::class)->findAll();
+        return $this->render('home/customers.html.twig', [
+            'projects' => $projects,
+        ]);
+    }
+
+    /**
+     * @Route("/sidesprojects", name="sideProjects")
+     */
+    public function sideProjects(ManagerRegistry $managerRegistry): Response
+    {
+        $projects = $managerRegistry->getRepository(Projects::class)->findAll();
+        return $this->render('home/sidesProjects.html.twig', [
+            'projects' => $projects,
+        ]);
+    }
 }
