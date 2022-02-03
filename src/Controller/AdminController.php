@@ -46,7 +46,7 @@ class AdminController extends AbstractController
 
             $entityManager->flush();
 
-            return $this->redirectToRoute('home_index');
+            return $this->redirectToRoute('home_projects_index_admin');
         }
 
         return $this->render('admin/new.html.twig', [
@@ -54,7 +54,7 @@ class AdminController extends AbstractController
         ]);
     }
     /**
-     * @Route("/", name="projects_index_admin", methods={"GET"})
+     * @Route("/show", name="projects_index_admin", methods={"GET"})
      */
     public function showAdmin(ProjectsRepository $projectsRepository): Response
     {
@@ -74,10 +74,10 @@ class AdminController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
-            return $this->redirectToRoute('home_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('home_projects_index_admin', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('projects/edit.html.twig', [
+        return $this->renderForm('admin/edit.html.twig', [
             'project' => $project,
             'form' => $form,
         ]);
@@ -93,6 +93,6 @@ class AdminController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('projects_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('home_projects_index_admin', [], Response::HTTP_SEE_OTHER);
     }
 }

@@ -27,7 +27,7 @@ security:
                 default_target_path: /home/admin
             logout:
                 path: app_logout
-                target: /home
+                target: /projects
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall

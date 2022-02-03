@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Projects{% endblock %}
+
+{% block body %}
+    {% include "_components/_navbar.html.twig" %}
+    <div class="text-center text-white mt-5">
+    <h1>Edit Projects</h1>
+
+    {{ include('admin/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('admin/_delete_form.html.twig') }}
+
+        <a href="{{ path('home_projects_index_admin') }}" class="mt-4 text-white nav-link">Back to list</a>
+    </div>
+{% endblock %}

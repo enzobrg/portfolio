@@ -14,7 +14,7 @@
     <div class="col-3 d-flex flex-column m-5">
         <div><img src="{{ project.imageUrl }}" class="cardpic" alt="..."></div>
         <div class="mt-3"><h5 class="text-white mt-3">{{ project.title }}</h5></div>
-        <div><a href="{{ path('projects_edit', {'id': project.id}) }}" class="btn btn-light">Modifier ce projet ? <i class="fas fa-pencil-alt"></i></a></div>
+        <div><a href="{{ path('home_projects_edit', {'id': project.id}) }}" class="btn btn-light">Modifier ce projet ? <i class="fas fa-pencil-alt"></i></a></div>
     </div>
     {% endfor %}
 </div>
