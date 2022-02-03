@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Projet ?{% endblock %}
+
+{% block body %}
+    {% include "_components/_navbar.html.twig" %}
+
+    <div class="d-flex justify-content-center text-white m-5">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <button type="submit">Add projects</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
