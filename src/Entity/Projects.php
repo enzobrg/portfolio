@@ -44,15 +44,12 @@ class Projects
      */
     private $category;
 
-    /**
-     * @ORM\ManyToMany(targetEntity=Languages::class, inversedBy="projects")
-     */
-    private $languages;
+/*    private $languages;
 
     public function __construct()
     {
         $this->languages = new ArrayCollection();
-    }
+    }*/
 
     public function getId(): ?int
     {
@@ -95,7 +92,7 @@ class Projects
         return $this;
     }
 
-    public function getLanguages(): ?string
+/*    public function getLanguages(): ?string
     {
         return $this->languages;
     }
@@ -105,7 +102,7 @@ class Projects
         $this->languages = $languages;
 
         return $this;
-    }
+    }*/
 
     public function getLink(): ?string
     {
@@ -131,7 +128,7 @@ class Projects
         return $this;
     }
 
-    public function addLanguage(Languages $language): self
+/*    public function addLanguage(Languages $language): self
     {
         if (!$this->languages->contains($language)) {
             $this->languages[] = $language;
@@ -145,5 +142,5 @@ class Projects
         $this->languages->removeElement($language);
 
         return $this;
-    }
+    }*/
 }

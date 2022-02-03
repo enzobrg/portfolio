@@ -7,7 +7,10 @@
     <div class="text-white text-center mt-5">
         <h2>Bienvenue sur ton espace profil {{ app.user.email }} !</h2>
     </div>
-<div class="text-center mt-5">
-    <a href="{{ path('home_new') }}" class="text-white nav-link fs-4">Ajouter un nouveau projet ? <i class="fas fa-plus-circle"></i></a>
-</div>
+    <div class="text-center mt-5">
+        <a href="{{ path('home_new') }}" class="text-white nav-link fs-4">Ajouter un nouveau projet ? <i class="fas fa-plus-circle"></i></a>
+    </div>
+    <div class="text-center mt-5">
+        <a href="{{ path('home_projects_index_admin') }}" class="text-white nav-link fs-4">Modifier ou suprimer un projet ? ? <i class="fas fa-pencil-alt"></i></a>
+    </div>
 {% endblock %}
