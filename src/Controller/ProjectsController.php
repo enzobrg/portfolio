@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * @Route("/projects")
+ * @Route("/")
  */
 class ProjectsController extends AbstractController
 {
