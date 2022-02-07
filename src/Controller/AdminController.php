@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Entity\Projects;
 use App\Form\Projects1Type;
 use App\Form\ProjectsType;;
-
 use App\Repository\ProjectsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -18,6 +17,12 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class AdminController extends AbstractController
 {
+
+    public function adminDashboard(): Response
+    {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+    }
+
     /**
      * @Route("/admin", name="admin")
      */

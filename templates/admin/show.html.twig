@@ -5,6 +5,7 @@
 {% block body %}
     {% include "_components/_navbar.html.twig" %}
 
+    {% if is_granted('ROLE_ADMIN') %}
     <div class="text-white fs-2 m-5 text-center">
         <i class="fas fa-history"></i>  Mes projets :
     </div>
@@ -18,4 +19,7 @@
     </div>
     {% endfor %}
 </div>
+    {% else %}
+        {% include "_components/adminOnly.html.twig" %}
+    {% endif %}
 {% endblock %}

@@ -4,6 +4,8 @@
 
 {% block body %}
     {% include "_components/_navbar.html.twig" %}
+
+    {% if is_granted('ROLE_ADMIN') %}
     <div class="text-center text-white mt-5">
     <h1>Edit Projects</h1>
 
@@ -12,4 +14,7 @@
 
         <a href="{{ path('home_projects_index_admin') }}" class="mt-4 text-white nav-link">Back to list</a>
     </div>
+    {% else %}
+        {% include "_components/adminOnly.html.twig" %}
+    {% endif %}
 {% endblock %}

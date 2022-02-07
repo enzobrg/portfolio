@@ -5,6 +5,7 @@
 {% block body %}
     {% include "_components/_navbar.html.twig" %}
 
+    {% if is_granted('ROLE_ADMIN') %}
     <div class="d-flex justify-content-center text-white m-5">
 
         {{ form_start(form) }}
@@ -14,4 +15,7 @@
         <button type="submit">Add projects</button>
         {{ form_end(form) }}
     </div>
+    {% else %}
+        {% include "_components/adminOnly.html.twig" %}
+    {% endif %}
 {% endblock %}
